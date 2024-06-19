@@ -3,7 +3,7 @@ import fetch from 'isomorphic-unfetch';
 
 const client = new ApolloClient({
     link: new HttpLink({
-        uri:'https://graphql.contentful.com/content/v1/spaces/wae5kt6i2hgo',
+        uri:process.env.URL_CONTENT,
         headers:{
             Authorization: `Bearer ${process.env.AUTHORIZATION}`,
         },
