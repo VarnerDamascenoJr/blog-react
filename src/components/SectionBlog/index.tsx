@@ -14,9 +14,6 @@ const SectionBlog = ({}) => {
             <p>sumary</p>
             <button>Read More</button>
             </div>
-            <div>
-
-            </div>
         </section>
     );
 }
