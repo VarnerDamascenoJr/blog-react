@@ -42,7 +42,7 @@ const PostPage = () => {
   };
 
   return (
-    <div>
+    <div className="container mx-auto md:container md:mx-auto">
       <NextSeo
         title={post.title}
         description={post.summary}
