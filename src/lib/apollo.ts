@@ -3,9 +3,9 @@ import fetch from 'isomorphic-unfetch';
 
 const client = new ApolloClient({
     link: new HttpLink({
-        uri:process.env.URL_CONTENT,
+        uri: process.env.NEXT_PUBLIC_CONTENTFUL_URL,
         headers:{
-            Authorization: `Bearer ${process.env.AUTHORIZATION}`,
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_CONTENTFUL_AUTHORIZATION}`,
         },
         fetch,
     }),
