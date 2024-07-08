@@ -1,18 +1,30 @@
 
+import { ButtonHTMLAttributes } from "react";
+import ButtonDefault from "../ButtonDefault";
+
+interface SectionProps  {
+    tags: String;
+    title: string;
+    author: string;
+    data: Date;
+    sumary: string;
+}
 
 
-
-const SectionBlog = ({}) => {
+const SectionBlog : React.FC<SectionProps> = ({tags}) => {
     return(
-        <section>
+        <section className="flex flex-row justify-items-center justify-around">
+            <div className="self-center">
+            <p className="font-bold">tag</p>
+            <h3 className="text-6xl font-bold">title</h3>
             <div>
-            <p>tag</p>
-            <h3>title</h3>
-            <div>
-                <p>Author and Data</p>
+                <p className="text-xs">Author and Data</p>
             </div>
-            <p>sumary</p>
-            <button>Read More</button>
+            <p className="text-base">sumary</p>
+            <ButtonDefault text="Read More" />
+            </div>
+            <div>
+                <img src="https://s3.envato.com/files/337539341/115_E39A5895.jpg" alt="Imag" />
             </div>
         </section>
     );
