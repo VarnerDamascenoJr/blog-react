@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import CardBlog from '@/components/Card';
 import Header from '@/components/Header';
+import SectionBlog from '@/components/SectionBlog';
 
 const PostLink = styled.a`
   color: #333;
@@ -95,6 +96,7 @@ const Home = () => {
         <h1>Bem-vindo, {user ? user.name : 'Usuário'}</h1>
         <button onClick={handleLogout}>Logout</button>
        <h1>Blog</h1>
+       <SectionBlog author='Teste' data={Date()} sumary='teste' tags='teste' title='test' key={1} />
        <ul>
          {data.entryCollection.items.map((post: any) => (
            <li key={post.sys.id}>
@@ -112,8 +114,6 @@ const Home = () => {
            />
            
            </li>
-
-
          ))}
        </ul>
        </div>
