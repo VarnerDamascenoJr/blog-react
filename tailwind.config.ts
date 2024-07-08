@@ -13,6 +13,10 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors:{
+        'regular-yellow': '#FFD050',
+        'regular-purple': '#592EA9',
+      }
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],
