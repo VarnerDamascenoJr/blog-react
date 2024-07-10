@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import CardBlog from '@/components/Card';
 import Header from '@/components/Header';
 import SectionBlog from '@/components/SectionBlog';
+import { GET_LAST_POST } from '@/utils/lastPost';
 
 const PostLink = styled.a`
   color: #333;
@@ -59,6 +60,8 @@ const Home = () => {
   };
 
   const { loading, error, data } = useQuery(GET_POSTS);
+
+  //const { loading, error, data} = useQuery(GET_LAST_POST);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
