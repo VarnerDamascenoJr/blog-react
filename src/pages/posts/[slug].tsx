@@ -42,7 +42,7 @@ const PostPage = () => {
   };
 
   return (
-    <div className="container mx-auto md:container md:mx-auto">
+    <div className="container mx-auto md:container md:mx-auto flex flex-col">
       <NextSeo
         title={post.title}
         description={post.summary}
@@ -56,7 +56,7 @@ const PostPage = () => {
           cardType: 'summary_large_image',
         }}
       />
-      <h1>{post.title}</h1>
+      <h1 className='text-5xl py-4'>{post.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.content }} />
        <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} /> 
     </div>
