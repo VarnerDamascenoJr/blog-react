@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors:{
         'regular-yellow': '#FFD050',
+        'regular-yellow-400': '#FFC100',
         'regular-purple': '#592EA9',
       }
     },
